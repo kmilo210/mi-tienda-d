@@ -163,7 +163,7 @@ const PAYMENT_PRODUCT_DESCRIPTIONS = {
     "Envía los datos de tu pedido por WhatsApp. Te compartiremos los medios de pago disponibles (Nequi, Bancolombia, PayPal y otros) para realizar el pago y confirmar tu pedido.",
 
   contraentrega:
-    "Paga el valor de los productos al momento de recibir tu pedido. El valor del envío se cobra según la forma de pago del envío seleccionada."
+    "Paga el valor de los productos al momento de recibir tu pedido. El costo del envío se calcula según la ciudad seleccionada.",
 
 };
 
@@ -268,17 +268,7 @@ function attachCartEvents() {
 
     });
 
-
-  // Pago del envío
-  document
-    .querySelectorAll('input[name="pago-envio"]')
-    .forEach(el => {
-
-      el.addEventListener("change", recalculateTotals);
-
-    });
-
-
+  
   const submitBtn = document.getElementById("submit-order-btn");
 
   if (submitBtn) {
@@ -304,48 +294,36 @@ function getSelectedRadioValue(name) {
 function recalculateTotals() {
 
   const subtotal = cartSubtotal();
-
   const city = getSelectedCity();
-
-  const pagoEnvio = getSelectedRadioValue("pago-envio");
+  const pagoProductos = getSelectedRadioValue("pago-productos");
 
   let shippingCost = null;
 
-  if (city && pagoEnvio) {
-
+  if (city && pagoProductos) {
     shippingCost =
-      pagoEnvio === "anticipado"
+      pagoProductos === "anticipado"
         ? city.shippingPrepaid
         : city.shippingCOD;
-
   }
-
 
   const subtotalEl = document.getElementById("summary-subtotal");
   const shippingEl = document.getElementById("summary-shipping");
   const totalEl = document.getElementById("summary-total");
 
-
   if (subtotalEl) {
     subtotalEl.textContent = formatPrice(subtotal);
   }
 
-
   if (shippingEl) {
-
     shippingEl.textContent =
       shippingCost !== null
         ? formatPrice(shippingCost)
-        : "Selecciona ciudad y forma de pago del envío";
-
+        : "Selecciona una ciudad para calcular el precio del envío";
   }
 
-
   if (totalEl) {
-
     totalEl.textContent =
       formatPrice(subtotal + (shippingCost || 0));
-
   }
 
 }
@@ -385,6 +363,11 @@ function validateCartForm() {
     {
       id: "input-nombre",
       label: "el nombre de quien recibe"
+    },
+
+    {
+      id: "input-documento",
+      label: "el número de documento"
     },
 
     {
@@ -475,31 +458,7 @@ function validateCartForm() {
 
   }
 
-
-  // Pago de envío
-  const pagoEnvio =
-    getSelectedRadioValue("pago-envio");
-
-  const errorPagoEnvio =
-    document.getElementById("error-pago-envio");
-
-  if (!pagoEnvio) {
-
-    if (errorPagoEnvio) {
-
-      errorPagoEnvio.textContent =
-        "Selecciona una forma de pago para el envío.";
-
-    }
-
-    valid = false;
-
-  } else if (errorPagoEnvio) {
-
-    errorPagoEnvio.textContent = "";
-
-  }
-
+  
 
   const cartErrorEl =
     document.getElementById("cart-form-error");
@@ -559,7 +518,6 @@ function handleSubmitOrder() {
     return;
   }
 
-
   const cart = getCart();
 
   const city = getSelectedCity();
@@ -567,21 +525,33 @@ function handleSubmitOrder() {
   const pagoProductos =
     getSelectedRadioValue("pago-productos");
 
-  const pagoEnvio =
-    getSelectedRadioValue("pago-envio");
-
-
+  // Seleccionar tarifa de envío según el pago de los productos
   const shippingCost =
-    pagoEnvio === "anticipado"
+    pagoProductos === "anticipado"
       ? city.shippingPrepaid
       : city.shippingCOD;
 
-
+  // Calcular totales
   const subtotal = cartSubtotal();
 
+  const totalPedido = subtotal + shippingCost;
+
+  const totalPagarAhora =
+    pagoProductos === "anticipado"
+      ? totalPedido
+      : 0;
+
+  const totalPagarAlRecibir =
+    pagoProductos === "contraentrega"
+      ? totalPedido
+      : 0;
 
   const nombre =
     document.getElementById("input-nombre")
+      .value.trim();
+
+  const documento =
+    document.getElementById("input-documento")
       .value.trim();
 
   const telefono =
@@ -606,7 +576,6 @@ function handleSubmitOrder() {
   let msg =
     `Hola, quiero confirmar el siguiente pedido:\n\n`;
 
-
   msg += `*PRODUCTOS*\n`;
 
   cart.forEach(item => {
@@ -616,69 +585,16 @@ function handleSubmitOrder() {
 
   });
 
-
   msg += `\n*RESUMEN DEL PAGO*\n`;
 
-  // NUEVO: forma de pago de los productos
   msg +=
     `• Forma de pago de los productos: ${paymentLabel(pagoProductos)}\n`;
 
   msg +=
     `• Productos: ${formatPrice(subtotal)}\n`;
 
-
-  // Forma de pago del envío
-  if (pagoEnvio === "anticipado") {
-
-    msg +=
-      `• Envío: ${formatPrice(shippingCost)}\n`;
-
-  } else {
-
-    msg +=
-      `• Envío Contraentrega: ${formatPrice(shippingCost)}\n`;
-
-  }
-
-
-  /* --------------------------- Cálculo de pagos --------------------------- */
-
-  // Productos que se pagan inmediatamente
-  const productosPagarAhora =
-    pagoProductos === "anticipado"
-      ? subtotal
-      : 0;
-
-
-  // Productos que se pagan al recibir
-  const productosPagarAlRecibir =
-    pagoProductos === "contraentrega"
-      ? subtotal
-      : 0;
-
-
-  // Envío que se paga inmediatamente
-  const envioPagarAhora =
-    pagoEnvio === "anticipado"
-      ? shippingCost
-      : 0;
-
-
-  // Envío que se paga al recibir
-  const envioPagarAlRecibir =
-    pagoEnvio === "anticipado"
-      ? 0
-      : shippingCost;
-
-
-  // Total que debe pagar ahora
-  const totalPagarAhora =
-    productosPagarAhora + envioPagarAhora;
-
-
-  // Total que debe pagar cuando recibe
-  const totalPagarAlRecibir =
-    productosPagarAlRecibir + envioPagarAlRecibir;
+  msg +=
+    `• Envío: ${formatPrice(shippingCost)}\n`;
 
 
   /* --------------------------- Datos de entrega --------------------------- */
@@ -687,6 +603,9 @@ function handleSubmitOrder() {
 
   msg +=
     `• Nombre: ${nombre}\n`;
+
+  msg +=
+  `• Documento: ${documento}\n`;  
 
   msg +=
     `• Teléfono: ${telefono}\n`;
@@ -700,7 +619,6 @@ function handleSubmitOrder() {
   msg +=
     `• Barrio: ${barrio}\n`;
 
-
   if (observaciones) {
 
     msg +=
@@ -712,7 +630,10 @@ function handleSubmitOrder() {
   /* --------------------------- Totales finales --------------------------- */
 
   msg +=
-    `\n*TOTAL A PAGAR AHORA: ${formatPrice(totalPagarAhora)}*\n`;
+    `\n*TOTAL DEL PEDIDO: ${formatPrice(totalPedido)}*\n`;
+
+  msg +=
+    `*TOTAL A PAGAR AHORA: ${formatPrice(totalPagarAhora)}*\n`;
 
   msg +=
     `*TOTAL A PAGAR AL RECIBIR: ${formatPrice(totalPagarAlRecibir)}*\n`;
@@ -737,14 +658,12 @@ function handleSubmitOrder() {
 
   recalculateTotals();
 
-
   const cartErrorEl =
     document.getElementById("cart-form-error");
 
   if (cartErrorEl) {
     cartErrorEl.textContent = "";
   }
-
 
   const successEl =
     document.getElementById("cart-success-message");
@@ -761,3 +680,6 @@ function handleSubmitOrder() {
   }
 
 }
+
+
+

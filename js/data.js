@@ -15,11 +15,10 @@
    1) CATEGORÍAS / COLECCIONES
 ------------------------------------------------------------------------- */
 const CATEGORIES = [
-  { slug: "cuadros-parejas",  name: "Cuadros para Parejas",  image: "images/Banner_Parejas_Cali.png" },
-  { slug: "cuadros-albumes",  name: "Cuadros de Álbumes",    image: "images/Banner_Albumes_Cali.png" },
-  { slug: "cuadros-diplomas", name: "Cuadros Diplomas",      image: "images/Banner_Diplomas.png" },
-  { slug: "cuadros-mama",     name: "Cuadros para Mamá",     image: "images/Banner_Mama_Cali.png" },
-  { slug: "cuadros-papa",     name: "Cuadros para Papá",     image: "images/Banner_Papa_Cali.png" }
+  { slug: "blusas",  name: "Blusas",  image: "images/Banner_Blusas.png" },
+  { slug: "flores",  name: "Flores",    image: "images/Banner_Flores.png" },
+  { slug: "camisetas", name: "Camisetas Personalizadas",   image: "images/Banner_Camisetas.png" }
+  
 ];
 
 /* -------------------------------------------------------------------------
@@ -39,543 +38,476 @@ const PRODUCTS = [
 
   /* -------------------------------------------------------------------------
    
-  Categoria: Cuadros para Parejas
+  Categoria: Escencia Femenina
    
   ------------------------------------------------------------------------- */
   {
-    id: "cuadro-spotify-1",
-    name: "Cuadro con Foto y Canción Spotify",
-    price: 30000,
-    category: "cuadros-parejas",
+    id: "blusa-siena",
+    name: "Blusa Siena",
+    price: 55000,
+    category: "blusas",
     images: [
-      "images/Parejas/M1/1001_Grueso_M1.png",
-      "images/Medidas_Cuadro_Cali.png"
+      "images/Blusas/REF_1875.jpeg"
     ],
-    description: "Convierte una canción especial en un recuerdo único. Este cuadro personalizado combina tu foto favorita con la canción y artista que elijas, creando un detalle original y emotivo para regalar. ❤️🎶\n\n📸 Para personalizarlo necesitamos:\n\n• 1 foto.\n• Título de la canción y artista.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
+    description: "REF_1875\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Beige\n\n<strong>Tallas disponibles:</strong> S - M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
     bestseller: true,
     seo: true
   },
+
+
   {
-    id: "cuadro-spotify-2",
-    name: "Cuadro con Canción y Frase",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1002_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Haz de una canción y una foto un recuerdo inolvidable. Este cuadro personalizado combina tu fotografía favorita, la canción que elijas y una frase especial para crear un regalo único y emotivo. ❤️🎶\n\n📸 Para personalizarlo necesitamos:\n\n• 1 foto.\n• Título de la canción y artista.\n• 1 frase corta.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-collage-corazon",
-    name: "Cuadro Collage Corazón",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1003_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un recuerdo lleno de momentos especiales. Este cuadro personalizado reúne hasta 16 de tus fotos favoritas, acompañadas de los nombres, una fecha importante y un mensaje corto para crear un detalle único y lleno de significado. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• Hasta 16 fotos.\n• Nombres.\n• Fecha especial.\n• 1 mensaje corto.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
+    id: "blusa-olivia",
+    name: "Blusa Olivia",
+    price: 65000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2092.jpeg"
+    ],
+    description: "REF_2092\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Verde, Mocca, Avena, Beige, Azul\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
     bestseller: true,
     seo: true
   },
+
   {
-    id: "cuadro-fecha-3",
-    name: "Cuadro Fecha + 3 Fotos",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1004_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle sencillo y lleno de significado para celebrar una fecha especial. Este cuadro personalizado combina tres fotografías con una fecha importante, creando un recuerdo único para conservar esos momentos para siempre. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 3 fotos.\n• Fecha especial.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-fecha-4",
-    name: "Cuadro Fecha + 4 Fotos",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1005_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un recuerdo único para celebrar el amor y una fecha especial. Este cuadro personalizado reúne cuatro fotografías de la pareja, su fecha especial y sus nombres, creando un detalle romántico para conservar sus mejores momentos. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 4 fotos.\n• Fecha especial.\n• Nombres de la pareja.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-fecha-8",
-    name: "Cuadro Fecha + 8 Fotos",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1006_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Celebra su historia de amor con un recuerdo lleno de momentos especiales. Este cuadro personalizado reúne ocho fotografías, una fecha importante y un mensaje especial para crear un detalle romántico y único. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 8 fotos.\n• Fecha especial.\n• 1 mensaje.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-iniciales-3",
-    name: "Cuadro Iniciales + 3 Fotos",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1007_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle especial para celebrar una conexión única. Este cuadro personalizado combina tres fotografías con las iniciales de dos personas, creando un recuerdo sencillo, elegante y lleno de significado. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 3 fotos.\n• 2 letras iniciales.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-google",
-    name: "Cuadro Buscador de Google",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1008_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un recuerdo personalizado inspirado en tus momentos más especiales. Este cuadro combina seis fotografías con un título único, creando un detalle original y emotivo para regalar a alguien especial. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 6 fotos.\n• 1 título.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-calendario-1",
-    name: "Cuadro Calendario #1",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1009_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Haz de una fecha especial un recuerdo inolvidable. Este cuadro personalizado combina tu fotografía favorita con la fecha más importante para ti, resaltada en un diseño de calendario elegante y emotivo. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 1 foto.\n• 1 fecha especial.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
+    id: "blusa-florencia",
+    name: "Blusa Florencia",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2017.jpeg"
+    ],
+    description: "REF_2017\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Café Rojizo\n\n<strong>Tallas disponibles:</strong> S - M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
     bestseller: true,
     seo: true
   },
+
   {
-    id: "cuadro-calendario-2",
-    name: "Cuadro Calendario #2",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1010_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Convierte una fecha especial en un recuerdo único para celebrar el amor. Este cuadro personalizado combina una fotografía especial, una fecha importante y una frase corta en un diseño elegante y emotivo. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 1 foto.\n• 1 fecha especial.\n• Nombres de la pareja.\n• 1 frase corta.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-collage-calendario",
-    name: "Cuadro Collage Calendario",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1011_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Cuenta la historia de tu amor a través de tus recuerdos favoritos. Este cuadro personalizado reúne hasta 18 fotografías y una fecha especial, creando un collage único para recordar esos momentos que hacen parte de su historia. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• Hasta 18 fotos.\n• 1 fecha especial.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-collage-cancion",
-    name: "Cuadro Collage Canción",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1012_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle lleno de recuerdos y música para celebrar el amor. Este cuadro personalizado reúne hasta 16 fotografías, los nombres de la pareja y la canción que quieren dedicar, creando un regalo único y especial. ❤️🎶\n\n📸 Para personalizarlo necesitamos:\n\n• Hasta 16 fotos.\n• Nombres de la pareja.\n• Título de la canción a dedicar.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-frase-12",
-    name: "Cuadro Frase + 12 Fotos",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1013_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un recuerdo lleno de momentos especiales para celebrar a esa persona que llegó para mejorar tu vida. Este cuadro personalizado reúne hasta 12 fotografías y un mensaje corto, creando un regalo único y lleno de amor. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• Hasta 12 fotos.\n• 1 mensaje corto.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-infinito-calendario",
-    name: "Cuadro Infinito Calendario",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1014_Grueso_M1.png",  "images/Medidas_Cuadro_Cali.png"],
-    description: "Celebra el amor con un recuerdo lleno de momentos especiales. Este cuadro personalizado reúne ocho fotografías, los nombres de la pareja, una fecha importante y una frase corta, creando un regalo único y lleno de significado. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 8 fotos.\n• Los dos nombres.\n• 1 fecha especial.\n• 1 frase corta.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-instalove",
-    name: "Cuadro InstaLove con Fotos",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1015_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un pedacito de su propio InstaLove. Este cuadro personalizado recrea el estilo de un perfil de Instagram para convertir sus recuerdos y su historia de amor en un detalle único y original. ❤️📱\n\n📸 Para personalizarlo necesitamos:\n\n• 7 fotos.\n• 1 fecha especial.\n• Nombres de la pareja \n• Tiempo que lleva la relación.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-superheroes",
-    name: "Cuadro Superhéroes de Amor",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1016_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un amor digno de una historia de superhéroes. Este cuadro personalizado combina tus mejores recuerdos con un diseño inspirado en Marvel, creando un regalo original para celebrar un amor que puede con todo. ❤️🦸‍♂️🦸‍♀️\n\n📸 Para personalizarlo necesitamos:\n\n• 8 fotos.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: true,
-    seo: false
-  },
-  {
-    id: "cuadro-mensaje-3-fotos",
-    name: "Cuadro Mensaje + 3 Fotos",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1017_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un recuerdo para celebrar una historia de amor y todos los momentos que han compartido. Este cuadro personalizado combina tus fotografías favoritas con un mensaje especial y una fecha importante, creando un regalo romántico y lleno de significado. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 3 fotos.\n• 1 mensaje.\n• 1 fecha especial.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "cuadro-noticia-amor",
-    name: "Cuadro Noticia de Amor",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1018_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Una noticia de amor que merece ser contada. Este cuadro personalizado presenta su historia como una portada especial, combinando sus mejores recuerdos, creando un detalle romántico y único. ❤️📰\n\n📸 Para personalizarlo necesitamos:\n\n• 2 fotos.\n• Nombres de la pareja.\n• 1 fecha especial.\n• 1 canción para dedicar.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
+    id: "blusa-verona",
+    name: "Blusa Verona",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2108.jpeg"
+    ],
+    description: "REF_2108\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Verde, Mocca azul, Avena, Beige\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
     bestseller: true,
     seo: true
   },
+
   {
-    id: "cuadro-significado-amor",
-    name: "Cuadro Significado de Amor",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1019_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un diseño elegante para convertir sus mejores recuerdos en una historia de amor. Este cuadro personalizado reúne nueve fotografías y un mensaje especial que puedes cambiar para hacerlo completamente único. ❤️\n\n📸 Para personalizarlo necesitamos:\n\n• 9 fotos.\n• 1 mensaje personalizado.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
+    id: "blusa-julieta",
+    name: "Blusa Julieta",
+    price: 65000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2225.jpeg"
+    ],
+    description: "REF_2225\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Amarillo, Azul, Rosado, Verde\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: true,
+    seo: true
+  },
+
+  {
+    id: "blusa-renata",
+    name: "Blusa Renata",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2229.jpeg"
+    ],
+    description: "REF_2229\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Amarillo, Azul Claro, Rosado, Verde\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: true,
+    seo: true
+  },
+
+  {
+    id: "blusa-celeste",
+    name: "Blusa Celeste",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2232.jpeg"
+    ],
+    description: "REF_2232\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Verde, Azul, Amarillo, Rosado\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: true,
+    seo: true
+  },
+
+  {
+    id: "blusa-gardenia",
+    name: "Blusa Gardenia",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2272.jpeg"
+    ],
+    description: "REF_2272\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Verde, Palo Rosa, Azul\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
     bestseller: false,
     seo: true
   },
+
   {
-    id: "cuadro-corazon-cancion",
-    name: "Cuadro Corazón + Canción Spotify",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1020_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un recuerdo lleno de amor, fotografías y música. Este cuadro personalizado reúne los mejores momentos de la pareja junto con una canción para dedicar, creando un detalle único y romántico. ❤️🎶\n\n📸 Para personalizarlo necesitamos:\n\n• Hasta 16 fotos.\n• Nombres de la pareja.\n• 1 fecha especial.\n• 1 canción para dedicar.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
+    id: "blusa-coralina",
+    name: "Blusa Coralina",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2275.jpeg"
+    ],
+    description: "REF_2275\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Palo Rosa, Azul, Verde\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
     bestseller: false,
     seo: true
   },
+
   {
-    id: "cuadro-netflix-1",
-    name: "Cuadro Estilo Netflix",
-    price: 30000,
-    category: "cuadros-parejas",
-    images: ["images/Parejas/M1/1021_Grueso_M1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Convierte su historia de amor en una producción digna de Netflix. Este cuadro personalizado recrea el estilo de una plataforma de streaming, combinando sus fotografías, nombres y un mensaje especial para crear un regalo original y único. ❤️🎬\n\n📸 Para personalizarlo necesitamos:\n\n• 7 fotos.\n• Nombres de la pareja.\n• 1 mensaje.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
+    id: "blusa-esmeralda",
+    name: "Blusa Esmeralda",
+    price: 65000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_1722_AGO_STICKER.png"
+    ],
+    description: "REF_1722 AGOTADA\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Verde Light\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
     bestseller: false,
-    seo: false
+    seo: true
   },
+
+  {
+    id: "blusa-siena-gloss",
+    name: "Blusa Siena Gloss",
+    price: 59000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_9_STICKER.png"
+    ],
+    description: "AGO_9 AGOTADA\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Beige Gloss\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "falda-primavera",
+    name: "Falda Primavera",
+    price: 95000,
+    category: "blusas",
+    images: [
+      "images/Blusas/1725_1719_AGO.jpeg"
+    ],
+    description: "REF_1719_1725 AGOTADA\n\nFalda femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Tallas disponibles:</strong> Única\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-serena",
+    name: "Blusa Serena",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/SIN_REF_3.jpeg"
+    ],
+    description: "REF 1980\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Camel, Negro\n\n<strong>Tallas disponibles:</strong> S - M\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-lavanda",
+    name: "Blusa Lavanda",
+    price: 45000,
+    category: "blusas",
+    images: [
+      "images/Blusas/SIN_REF_4.jpeg"
+    ],
+    description: "REF 1645\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Morado, Fucsia, Camel\n\n<strong>Tallas disponibles:</strong> S - M - L\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+
+  {
+    id: "blusa-basica-fanny",
+    name: "Blusa Básica Fanny",
+    price: 45000,
+    category: "blusas",
+    images: [
+      "images/Blusas/SIN_REF_1_OFF.png"
+    ],
+    description: "REF 1667 \n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Blanco, Negro, Amarillo \n\n<strong>Tallas disponibles:</strong> S - M - L \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+
+  {
+    id: "blusa-amelia",
+    name: "Blusa Amelia",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2125.jpeg"
+    ],
+    description: "REF_2125\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Azul, Rosado, Verde, Amarillo, Beige\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-toscana",
+    name: "Blusa Toscana",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2230.jpeg"
+    ],
+    description: "REF_2230\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Verde, Amarillo, Azul, Rosado\n\n<strong>Tallas disponibles:</strong> M - L - XL\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "vestido-esmeralda",
+    name: "Vestido Esmeralda",
+    price: 145000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_2_STICKER.png"
+    ],
+    description: "AGO_2 AGOTADA\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> \n\n<strong>Tallas disponibles:</strong> \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-arcoiris",
+    name: "Blusa Arcoiris",
+    price: 45000,
+    category: "blusas",
+    images: [
+      "images/Blusas/SIN_REF_2_OFF.png"
+    ],
+    description: "REF 1574\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Arcoiris\n\n<strong>Tallas disponibles:</strong> S - M - L\n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "falda-cielo",
+    name: "Falda Cielo",
+    price: 95000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_3_STICKER.png"
+    ],
+    description: "AGO_3 AGOTADA\n\nFalda con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> \n\n<strong>Tallas disponibles:</strong> \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "vestido-genova",
+    name: "Vestido Genova",
+    price: 125000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_5_STICKER.png"
+    ],
+    description: "AGO_5 AGOTADA\n\nVestido con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> \n\n<strong>Tallas disponibles:</strong> \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-valentina-popelina",
+    name: "Blusa Valentina",
+    price: 45000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_1637_OFF.png"
+    ],
+    description: "REF_1637 \n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Fucsia, Negro, Blanco \n\n<strong>Tallas disponibles:</strong> S - M - L \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+
+  {
+    id: "blusa-basica-mia",
+    name: "Blusa Básica Mia",
+    price: 45000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_1668_OFF.png"
+    ],
+    description: "REF_1668 \n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Amarillo \n\n<strong>Tallas disponibles:</strong> S - M - L - XL \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "falda-pacific",
+    name: "Falda Pacific",
+    price: 95000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_1759.jpeg"
+    ],
+    description: "REF_1759 FALDA \n\nFalda femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Azul Floreada \n\n<strong>Tallas disponibles:</strong> Talla Única \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-paris",
+    name: "Blusa París",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2201.jpeg"
+    ],
+    description: "REF_2201 \n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Negro\n\n<strong>Tallas disponibles:</strong> S - M - L - XL \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-capri",
+    name: "Blusa Capri",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2261.jpeg"
+    ],
+    description: "REF_2261 \n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Azul, Palo Rosa, Verde\n\n<strong>Tallas disponibles:</strong> M - L - XL \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-roma",
+    name: "Blusa Roma",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/REF_2262.jpeg"
+    ],
+    description: "REF_2262 \n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> Azul, Rosado, Negro\n\n<strong>Tallas disponibles:</strong> M - L - XL \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-midnight",
+    name: "Blusa Midnight",
+    price: 45000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_1_STICKER.png"
+    ],
+    description: "AGO_1 AGOTADA\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> \n\n<strong>Tallas disponibles:</strong> \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-safari",
+    name: "Blusa Safari",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_4_STICKER.png"
+    ],
+    description: "AGO_4 AGOTADA\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> \n\n<strong>Tallas disponibles:</strong> \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-marine",
+    name: "Blusa Marine",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_6_STICKER.png"
+    ],
+    description: "AGO_6 AGOTADA\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> \n\n<strong>Tallas disponibles:</strong> \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  {
+    id: "blusa-oxford",
+    name: "Blusa Oxford",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_7_STICKER.png"
+    ],
+    description: "AGO_7 AGOTADA\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> \n\n<strong>Tallas disponibles:</strong> \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+
+  {
+    id: "blusa-aurora",
+    name: "Blusa Aurora",
+    price: 69000,
+    category: "blusas",
+    images: [
+      "images/Blusas/AGO_8_STICKER.png"
+    ],
+    description: "AGO_8 AGOTADA\n\nBlusa femenina con un diseño moderno y versátil. Combina estilo, comodidad y elegancia en una prenda que no puede faltar en tu armario.\n\n<strong>Colores disponibles:</strong> \n\n<strong>Tallas disponibles:</strong> \n\n🚚 Envío: 2 a 4 días hábiles.",
+    bestseller: false,
+    seo: true
+  },
+
+  
+
 
 
   /* -------------------------------------------------------------------------
    
-  Categoria: Cuadros para Mamá
-   
-  ------------------------------------------------------------------------- */
-  {
-    id: "mama-01",
-    name: "Cuadro Para Mamá REF-01",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_01.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 1 Foto.\n• Nombre de la mamá \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-02",
-    name: "Cuadro Para Mamá REF-02",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_02.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 4 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-03",
-    name: "Cuadro Para Mamá REF-03",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_03.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 9 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-04",
-    name: "Cuadro Para Mamá REF-04",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_04.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 9 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-05",
-    name: "Cuadro Para Mamá REF-05",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_05.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 4 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-06",
-    name: "Cuadro Para Mamá REF-06",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_06.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 9 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-07",
-    name: "Cuadro Para Mamá REF-07",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_07.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 1 Foto. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-08",
-    name: "Cuadro Para Mamá REF-08",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_08.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 6 Fotos.\n• Nombre de la mamá \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-09",
-    name: "Cuadro Para Mamá REF-09",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_09.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 6 Fotos.\n• Nombre de la mamá \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-10",
-    name: "Cuadro Para Mamá REF-10",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_10.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 3 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-11",
-    name: "Cuadro Para Mamá REF-11",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_11.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 8 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-12",
-    name: "Cuadro Para Mamá REF-12",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_12.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 5 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-13",
-    name: "Cuadro Para Mamá REF-13",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_13.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 6 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-14",
-    name: "Cuadro Para Mamá REF-14",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_14.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 4 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "mama-15",
-    name: "Cuadro Para Mamá REF-15",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_15.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 12 Fotos. \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
+  Categoria: Flores
 
-  {
-    id: "mama-16",
-    name: "Cuadro Para Mamá REF-16",
-    price: 30000,
-    category: "cuadros-mama",
-    images: ["images/Mamá/M1/Mamá_M1_16.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle hecho para celebrar a mamá y agradecerle por todo su amor. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 6 Fotos.\n• Mensaje Personalizado \n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-
-  /* -------------------------------------------------------------------------
-   
-  Categoria: Diplomas
-   
   ------------------------------------------------------------------------- */
-  {
-    id: "diploma-mama-01",
-    name: "Diploma a la Mejor Mamá",
-    price: 30000,
-    category: "cuadros-diplomas",
-    images: ["images/Diplomas/Diploma_Mamá_1.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Porque mamá merece un reconocimiento por todo lo que hace. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• Nombre de la mamá. \n• Nombre de quien entrega el diploma.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "diploma-mama-02",
-    name: "Diploma Reconocimiento Mamá",
-    price: 30000,
-    category: "cuadros-diplomas",
-    images: ["images/Diplomas/Diploma_Mamá_2.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Porque mamá merece un reconocimiento por todo lo que hace. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• Nombre de la mamá.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "diploma-mama-foto",
-    name: "Diploma Mejor Mamá con Foto",
-    price: 30000,
-    category: "cuadros-diplomas",
-    images: ["images/Diplomas/Diploma_Mamá_Foto.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Porque mamá merece un reconocimiento por todo lo que hace. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• Nombre de la mamá.\n• 1 foto.\n• Nombre de quien entrega el diploma.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   /* -------------------------------------------------------------------------
    
-  Categoria: Cuadros para Papá
+  Categoria: Esencia Natural
    
   ------------------------------------------------------------------------- */
-  {
-    id: "papa-01",
-    name: "Cuadro Para Papá REF-01",
-    price: 30000,
-    category: "cuadros-papa",
-    images: ["images/Papá/M1/Papá_M1_01.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle especial para celebrar a papá y agradecerle por todo su amor, apoyo y enseñanzas. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 3 Fotos.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "papa-02",
-    name: "Cuadro Para Papá REF-02",
-    price: 30000,
-    category: "cuadros-papa",
-    images: ["images/Papá/M1/Papá_M1_02.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle especial para celebrar a papá y agradecerle por todo su amor, apoyo y enseñanzas. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 4 Fotos.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "papa-03",
-    name: "Cuadro Para Papá REF-03",
-    price: 30000,
-    category: "cuadros-papa",
-    images: ["images/Papá/M1/Papá_M1_03.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle especial para celebrar a papá y agradecerle por todo su amor, apoyo y enseñanzas. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 4 Fotos.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "papa-04",
-    name: "Cuadro Para Papá REF-04",
-    price: 30000,
-    category: "cuadros-papa",
-    images: ["images/Papá/M1/Papá_M1_04.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle especial para celebrar a papá y agradecerle por todo su amor, apoyo y enseñanzas. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 9 Fotos.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "papa-05",
-    name: "Cuadro Para Papá REF-05",
-    price: 30000,
-    category: "cuadros-papa",
-    images: ["images/Papá/M1/Papá_M1_05.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle especial para celebrar a papá y agradecerle por todo su amor, apoyo y enseñanzas. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 12 Fotos.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-  {
-    id: "papa-06",
-    name: "Cuadro Para Papá REF-06",
-    price: 30000,
-    category: "cuadros-papa",
-    images: ["images/Papá/M1/Papá_M1_06.png", "images/Medidas_Cuadro_Cali.png"],
-    description: "Un detalle especial para celebrar a papá y agradecerle por todo su amor, apoyo y enseñanzas. ❤️ \n\n📸 Para personalizarlo necesitamos:\n\n• 6 Fotos.\n\n📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
+  
 
-
-  /* -------------------------------------------------------------------------
-   
-  Categoria: Cuadros Álbumes
-   
-  ------------------------------------------------------------------------- */
-  {
-    id: "cuadro-1989",
-    name: "Cuadro - 1989 - TS ",
-    price: 30000,
-    category: "cuadros-albumes",
-    images: ["images/Albumes/1989_M1.png", "images/Medidas_Cuadro_Cali_2.png"],
-    description: "📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-
-  {
-    id: "cuadro-cosa-nuestra",
-    name: "Cuadro - Cosa Nuestra",
-    price: 30000,
-    category: "cuadros-albumes",
-    images: ["images/Albumes/CosaNuestra_M1.png", "images/Medidas_Cuadro_Cali_2.png"],
-    description: "📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-
-  {
-    id: "cuadro-en-dormir-sin-madrid",
-    name: "Cuadro - En Dormir Sin Madrid",
-    price: 30000,
-    category: "cuadros-albumes",
-    images: ["images/Albumes/EnDormirSinMadrid_M1.png", "images/Medidas_Cuadro_Cali_2.png"],
-    description: "📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
-
-  {
-    id: "cuadro-l3tra-2",
-    name: "Cuadro - L3TRA 2",
-    price: 30000,
-    category: "cuadros-albumes",
-    images: ["images/Albumes/L3TRA2_M1.png", "images/Medidas_Cuadro_Cali_2.png"],
-    description: "📏 Medidas: 25 × 30 cm\n⚒️ Materiales: Madera sintética y vidrio protector.\n🚚 Envío: 2 a 4 días hábiles.",
-    bestseller: false,
-    seo: true
-  },
+  
 
 
 
@@ -598,7 +530,14 @@ const PRODUCTS = [
    - shippingCOD: costo de envío si el cliente paga el envío contraentrega
 ------------------------------------------------------------------------- */
 const CITIES = [
-  { name: "Cali",         shippingPrepaid: 10000, shippingCOD: 10000 }
+  { name: "Cali",         shippingPrepaid: 10000, shippingCOD: 12000 },
+  { name: "Bogota",       shippingPrepaid: 18500, shippingCOD: 20750 },
+  { name: "Medellin",     shippingPrepaid: 12500, shippingCOD: 14750 },
+  { name: "Pereira",      shippingPrepaid: 12500, shippingCOD: 14750 },
+  { name: "Popayan",      shippingPrepaid: 12500, shippingCOD: 14750 },
+  { name: "Barranquilla",       shippingPrepaid: 18500, shippingCOD: 20750 },
+  { name: "Cartagena",          shippingPrepaid: 18500, shippingCOD: 20750 },
+  { name: "Otra (Poner en observaciones)",         shippingPrepaid: 20900, shippingCOD: 23150 }
 ];
 
 /* -------------------------------------------------------------------------
@@ -612,7 +551,7 @@ const PAYMENT_METHODS = [
   { name: "Bancolombia",  logo: "images/LogosPagos/Bancolombia_Logo.png" },
   { name: "Daviplata",    logo: "images/LogosPagos/Daviplata_Logo.png" },
   { name: "Bre-B",        logo: "images/LogosPagos/Bre-B_Logo.png" },
-  { name: "PayPal",       logo: "images/LogosPagos/Paypal_Logo.png" }
+  { name: "PayPal",       logo: "images/LogosPagos/PayPal_Logo_2.png" }
 ];
 
 /* -------------------------------------------------------------------------
@@ -623,19 +562,19 @@ const PAYMENT_METHODS = [
 ------------------------------------------------------------------------- */
 const REVIEWS = [
   {
-    name: "Mariana C.",
+    name: "Manuela J.",
     photo: "images/reviewer-1.svg",
     stars: 5,
-    comment: "El cuadro quedó hermoso, la calidad superó lo que esperaba y llegó en buen tiempo. ¡Totalmente recomendados!"
+    comment: "La blusa olivia es hermosa, la calidad superó lo que esperaba y llegó en buen tiempo. ¡Totalmente recomendados!"
   },
   {
-    name: "Julián R.",
+    name: "Carolina V.",
     photo: "images/reviewer-2.svg",
     stars: 5,
-    comment: "Pedí un cuadro para el cumpleaños de mi mamá y le encantó. La atención por WhatsApp fue súper rápida."
+    comment: "Pedí una blusa para mi mamá y le encantó. La atención fue muy buena"
   },
   {
-    name: "Andrea L.",
+    name: "Vanessa A.",
     photo: "images/reviewer-3.svg",
     stars: 5,
     comment: "Muy buen producto y llegó a tiempo a mi ciudad. Lo volvería a pedir sin duda."
@@ -646,15 +585,15 @@ const REVIEWS = [
    6) DATOS GENERALES DEL NEGOCIO
 ------------------------------------------------------------------------- */
 const STORE = {
-  name: "Fika Store Cali",
-  logo: "images/LogoFikaStore.svg",
-  shippingText: "Cuadros Personalizados en Cali ",
-  whatsappNumber: "573159159677", // sin "+" y sin espacios
-  instagram: "fika_store_col",
-  tiktok: "fika_store_col",
-  bannerImage: "images/Banner-Fika-Cali-3.png",
-  bannerTitle: "Cuadros que cuentan tu historia",
-  bannerSubtitle: "Personalizados, hechos con amor",
+  name: "Mi Tienda D",
+  logo: "images/MiTiendaD_Logo.png",
+  shippingText: "Blusas, Ropa Femenina, Flores y mucho más ",
+  whatsappNumber: "573153753681", // sin "+" y sin espacios
+  instagram: "mi_tienda_d",
+  tiktok: "mi_tienda_d",
+  bannerImage: "images/Banner_Fati_6.png",
+  bannerTitle: "Estilo que representa la mujer que eres",
+  bannerSubtitle: "Looks que se adaptan a tu esencia",
   codTitle: "Pago Contraentrega",
-  codText: "Manejamos domicilios y entregas en Cali con la opción de pago contraentrega: Pagas el valor del producto y domicilio cuando recibes tu pedido en la puerta de tu casa"
+  codText: "Manejamos entregas en Cali y envíos a nivel nacional con la opción de pago contraentrega: Pagas el valor del producto y domicilio cuando recibes tu pedido en la puerta de tu casa"
 };

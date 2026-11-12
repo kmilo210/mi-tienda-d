@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Carrito de compras — Fika Store</title>
+<title>Carrito de compras — Mi Tienda D</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" />
@@ -41,6 +41,16 @@
             <label for="input-nombre">Nombre Completo de quién recibe *</label>
             <input type="text" id="input-nombre" />
             <span class="field-error" id="error-input-nombre"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="input-documento">Cédula o Número de Documento *</label>
+            <input
+              type="text"
+              id="input-documento"
+              placeholder="Ingresa tu número de documento"
+            />
+            <span class="field-error" id="error-input-documento"></span>
           </div>
 
 
@@ -89,7 +99,7 @@
             <span class="radio-group-label">Pago de los Productos *</span>
             <label class="radio-option">
               <input type="radio" name="pago-productos" value="anticipado" />
-              <span>Pago Previo a la Elaboración</span>
+              <span>Pago Previo</span>
             </label>
             <label class="radio-option">
               <input type="radio" name="pago-productos" value="contraentrega" />
@@ -99,18 +109,6 @@
             <span class="field-error" id="error-pago-productos"></span>
           </div>
 
-          <div class="radio-group">
-            <span class="radio-group-label">Pago del Envío *</span>
-            <label class="radio-option">
-              <input type="radio" name="pago-envio" value="anticipado" />
-              <span>Pago Previo</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="pago-envio" value="contraentrega" />
-              <span>Pago Contraentrega</span>
-            </label>
-            <span class="field-error" id="error-pago-envio"></span>
-          </div>
 
           <div class="cart-summary-totals">
             <div class="summary-row">
@@ -119,7 +117,7 @@
             </div>
             <div class="summary-row">
               <span>Envío</span>
-              <span id="summary-shipping">Selecciona ciudad y forma de pago del envío</span>
+              <span id="summary-shipping">Selecciona una ciudad para calcular el precio del envío</span>
             </div>
             <div class="summary-row summary-total-row">
               <span>Total</span>

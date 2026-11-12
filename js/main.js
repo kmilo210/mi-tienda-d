@@ -83,10 +83,10 @@ function setProductSEO(product) {
     `${SITE_URL}/${product.images[0]}`;
 
   const title =
-    `${product.name} | Fika Store Colombia`;
+    `${product.name} | Mi Tienda D`;
 
   const description =
-    `${product.name} personalizado. ` +
+    `${product.name} ` +
     `${product.description} ` +
     `Precio: ${formatPrice(product.price)}. ` +
     `Envíos a toda Colombia.`;
@@ -150,12 +150,12 @@ function setCategorySEO(category) {
     `${SITE_URL}/categoria.html?cat=${category.slug}`;
 
   const title =
-    `${category.name} Personalizados | Fika Store Colombia`;
+    `${category.name}  | Mi Tienda D`;
 
   const description =
     `Descubre ${category.name.toLowerCase()} ` +
-    `personalizados en Fika Store Colombia. ` +
-    `Diseños únicos y regalos especiales con ` +
+    `en Mi Tienda D. ` +
+    `Diseños únicos y en tendencia con ` +
     `envíos a toda Colombia.`;
 
   document.title = title;
@@ -436,13 +436,13 @@ function renderFooter() {
     <div class="footer-inner">
       <div class="footer-col">
         <h4>${STORE.name}</h4>
-        <p>Cuadros y regalos personalizados, hechos con dedicación para acompañar tus momentos más especiales.</p>
+        <p>Blusas femeninas con envío a nivel nacional, arreglos florales con domicilios en Cali, camisetas personalizadas y mucho más</p>
       </div>
       <div class="footer-col">
         <h4>Contáctanos</h4>
         <p>¿Tienes dudas o quieres hacer un pedido personalizado? Escríbenos directamente por WhatsApp.</p>
         <a class="footer-whatsapp" href="${waLink('Hola, quiero más información sobre sus productos 🙂')}" target="_blank" rel="noopener">
-          ${whatsappIconSVG} <span>+57 315 915 9677</span>
+          ${whatsappIconSVG} <span>+57 315 375 3681</span>
         </a>
       </div>
       <div class="footer-col">
@@ -605,7 +605,7 @@ function renderCategoryPage() {
       titleEl.textContent = "Colección";
     }
 
-    document.title = "Colección | Fika Store Colombia";
+    document.title = "Colección | Mi Tienda D";
 
     return;
   }
