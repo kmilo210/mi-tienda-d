@@ -1,5 +1,5 @@
 /* =========================================================================
-   FIKA STORE — LÓGICA DEL SITIO
+   mitiendad STORE — LÓGICA DEL SITIO
    No es necesario editar este archivo para agregar productos.
    Todo el contenido se edita en js/data.js
    ========================================================================= */
@@ -27,7 +27,7 @@ function categoryName(slug) {
 
 /* --------------------------- SEO --------------------------- */
 
-const SITE_URL = "https://fikastore.store";
+const SITE_URL = "https://mitiendad.store";
 
 
 function setMetaContent(selector, content) {

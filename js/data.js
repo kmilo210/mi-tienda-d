@@ -1,5 +1,5 @@
 /* =========================================================================
-   FIKA STORE — DATOS DEL CATÁLOGO
+   mitiendad STORE — DATOS DEL CATÁLOGO
    =========================================================================
    Este es el ÚNICO archivo que necesitas editar para:
    - Crear o renombrar categorías (colecciones)

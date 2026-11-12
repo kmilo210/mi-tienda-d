@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fikastore.store/sitemap.xml
+Sitemap: https://mitiendad.store/sitemap.xml

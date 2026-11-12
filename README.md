@@ -1,4 +1,4 @@
-# Fika Store — Catálogo Virtual
+# mitiendad Store — Catálogo Virtual
 
 Sitio web de catálogo (no tiene carrito de compras ni pagos en línea): el
 cliente navega el catálogo y hace el pedido por WhatsApp con un solo clic.
@@ -6,7 +6,7 @@ cliente navega el catálogo y hace el pedido por WhatsApp con un solo clic.
 ## 📁 Estructura de archivos
 
 ```
-fika-store/
+mitiendad-store/
 ├── index.html          → Página de inicio
 ├── categoria.html       → Página que lista los productos de una colección
 ├── producto.html        → Página de un producto individual (galería + carrito)
@@ -24,7 +24,7 @@ fika-store/
 
 ## ▶️ Cómo verlo en Visual Studio Code
 
-1. Abre la carpeta `fika-store` en VS Code (Archivo → Abrir carpeta).
+1. Abre la carpeta `mitiendad-store` en VS Code (Archivo → Abrir carpeta).
 2. Instala la extensión **Live Server** (de Ritwick Dey) desde el
    marketplace de extensiones.
 3. Haz clic derecho sobre `index.html` → **"Open with Live Server"**.
@@ -179,10 +179,10 @@ También en `js/data.js`, en el bloque `STORE`, puedes cambiar:
 
 ```js
 const STORE = {
-  name: "Fika Store",
+  name: "mitiendad Store",
   whatsappNumber: "573159159677", // sin "+" y sin espacios
-  instagram: "fika_store_col",
-  tiktok: "fika_store_col",
+  instagram: "mitiendad_store_col",
+  tiktok: "mitiendad_store_col",
   ...
 };
 ```
@@ -208,7 +208,7 @@ una fuente similar (`Segoe UI` / `Arial`) como respaldo automático.
 
 Como es un sitio 100% estático (sin base de datos ni servidor), lo puedes
 publicar gratis en cualquiera de estas opciones, subiendo la carpeta
-`fika-store` completa:
+`mitiendad-store` completa:
 
 - **Netlify** (netlify.com) → arrastra la carpeta y listo.
 - **Vercel** (vercel.com)
